@@ -1,0 +1,30 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: org.liquibase:liquibase-maven-plugin
+    versions:
+    - 4.2.2
+    - 4.3.0
+    - 4.3.1
+    - 4.3.2
+    - 4.3.3
+  - dependency-name: org.liquibase.ext:liquibase-hibernate5
+    versions:
+    - 4.2.2
+    - 4.3.0.1
+    - 4.3.1
+    - 4.3.2
+  - dependency-name: org.hibernate:hibernate-core
+    versions:
+    - 5.4.27.Final
+    - 5.4.28.Final
+    - 5.4.29.Final
+  - dependency-name: com.github.eirslett:frontend-maven-plugin
+    versions:
+    - 1.11.0
+    - 1.11.2
